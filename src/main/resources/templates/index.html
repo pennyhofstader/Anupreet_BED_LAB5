@@ -43,9 +43,9 @@
 
 
 		<!-- table to show tickets -->
-		<table class="table">
+		<table class="table table-bordered">
 			<thead class="bg-dark text-white">
-				<tr>
+				<tr class="table-active">
 					<!-- <th scope="col">#</th> -->
 
 					<th scope="col">Employee First Name</th>
@@ -58,10 +58,10 @@
 				<tr th:each="e:${emp}">
 
 
-					<td th:text="${e.firstName}"></td>
-					<td th:text="${e.lastName}"></td>
-					<td th:text="${e.email}"></td>
-					<td><a class="btn btn-primary" href="#" role="button"
+					<td class="table-secondary" th:text="${e.firstName}"></td>
+					<td class="table-secondary" th:text="${e.lastName}"></td>
+					<td class="table-secondary" th:text="${e.email}"></td>
+					<td class="table-secondary"><a class="btn btn-primary" href="#" role="button"
 						th:href="@{/edit/{id}(id=${e.id})}">Edit</a> <a
 						class="btn btn-danger text-white" href="#" role="button"
 						th:href="@{/delete/{id}(id=${e.id})}">Delete</a>
